@@ -1,0 +1,137 @@
+<div *ngIf="mobile">
+   <div *ngIf="ifTrue">
+      <h1 class="my_text_center">No Items Found in Watchlist.</h1>
+      <div *ngIf="mob0" style="height: 400px;" class="dummy"></div> 
+   </div>
+</div>
+
+<div *ngIf="!mobile">
+   <div *ngIf="ifTrue">
+      <h1 class="my_text_center">No Items Found in Watchlist.</h1>
+    <div *ngIf="lap0" style="height: 550px;" class="dummy_for_desktop"></div> 
+  
+   </div>
+</div>
+
+<div *ngIf="!ifTrue">
+
+   <div *ngIf="mobile" class="container">
+      <div class="row">
+         <h1 class="my_text_phone">My WatchList</h1>
+      </div>
+      <div class="row">
+         <div class="col-md-2 col-sm-4" *ngFor="let card of l">
+            <div class="my-card center-it" (click)="routeToPage(card.id,card.media_type)">
+               <img [src]="card.poster" alt="" class="my-img-class my-mobile-padding">
+               <div class="bg">
+               <div  class="carousel-caption text-left">
+                  <h5 >{{card.title}}</h5>
+              </div>
+            </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+
+
+
+
+
+
+         <!-- <div  *ngIf="mobile" class=""
+         >
+         <div  *ngFor="let card of l" class="col-xs-8">
+             <app-watchlist-hover [poster]="card.poster" [id]="card.id" [media_type]="card.media_type"
+                 [title]="card.title"></app-watchlist-hover>
+ 
+         </div>
+      </div> -->
+
+
+
+      <!-- <div  *ngIf="mobile" [showNavigationArrows]="!mobile" class=""
+      [showNavigationIndicators]="!mobile" [interval]="0">
+      <ng-template ngbSlide *ngFor="let card of l" class="col-xs-8">
+          <app-hovercomp [poster]="card.poster" [id]="card.id" [media_type]="card.media_type"
+              [title]="card.title"></app-hovercomp>
+
+      </ng-template>
+   </div> -->
+      
+
+
+
+<!--   -->
+       <div *ngIf="!mobile" class="my-warp-around">
+           <div class="container">
+
+            <div class="row">
+               <h1 class="my_text_phone">My WatchList</h1>
+            </div>
+
+
+
+               <div class="row">
+                   <div class="my-display-card  col-sm-12 col-md-2 " *ngFor="let card of l">
+                       <app-hovercomp class="card border-0 box card-my  text-white bg-dark mb-3"
+                           [poster]="card.poster" [id]="card.id" [media_type]="card.media_type"
+                           [title]="card.title"></app-hovercomp>
+                   </div>
+               </div>
+               <div *ngIf="lap1" style="height: 270px;" class="desk_has"></div> 
+           </div>
+       </div>
+
+
+ 
+
+
+
+
+
+<!--   -->
+<!-- 
+<div *ngIf="mobile">
+   <div *ngIf="ifTrue">
+      <h1 class="my_text_center">No Items Found in Watchlist.</h1>
+   </div>
+</div>
+
+<div *ngIf="!mobile">
+   <div *ngIf="ifTrue">
+      <h1 class="my_text_center">No Items Found in Watchlist.</h1>
+   </div>
+</div>
+
+<div *ngIf="!ifTrue">
+
+   <div *ngIf="mobile" class="container">
+      <div class="row">
+         <h1 class="my_text_phone">My WatchList</h1>
+      </div>
+      <div class="row">
+         <div class="col-md-2 col-sm-4" *ngFor="let card of l">
+            <div class="my-card center-it" (click)="routeToPage(card.id,card.media_type)">
+               <img [src]="card.poster" alt="" class="my-img-class my-mobile-padding">
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div *ngIf="!mobile" class="container">
+      <div class="row">
+         <h1>My WatchList</h1>
+      </div>
+      <div class="row">
+         <div class="col-md-2 col-sm-4" *ngFor="let card of l">
+
+            <div class="my-card" (click)="routeToPage(card.id,card.media_type)">
+               <img [src]="card.poster" alt="" class="my-img-class">
+            </div>
+         </div>
+      </div>
+   </div>
+</div> -->

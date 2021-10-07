@@ -1,0 +1,24 @@
+
+<nav class="navbar navbar-expand-sm  navbar-dark color_my_nav">
+    <a (click)="RouteToHomePage()" class="navbar-brand my-class-style">USC Films</a>
+    <button class="navbar-toggler" data-toggle="collapse" data-target="#my-data-tar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="my-data-tar">
+      <ul class="navbar-nav ">
+        <li class="nav-item ml-auto"><a (click)="RouteToHomePage()" class="nav-link my-class-style">Home</a></li>
+        <li class="nav-item ml-auto"><a (click)="RouteToMyList()" class="nav-link my-class-style">My List</a></li>
+      </ul>
+      <ul class=" navbar-nav ml-auto">
+  <ng-template #rt let-r="result" let-t="term">
+  <img [src]="r.backdrop_path" class="mr-1" style="width: 80px">
+  <ngb-highlight [result]="r.name" [term]="searchTermModel" ></ngb-highlight>
+
+</ng-template>
+<input id="typeahead-http" style="width: 200px;" type="text" class="form-control" placeholder="Search" [(ngModel)]="searchTermModel"
+  [ngbTypeahead]="search" [resultTemplate]="rt" [inputFormatter]="formatter" (selectItem)="selectedItem($event) "/>
+      </ul>  
+    </div>
+  </nav>
+
+  <div style="margin-bottom: 20px;"></div>

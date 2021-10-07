@@ -1,0 +1,278 @@
+<div class="try-test">
+
+<div class="my-outer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <div class="embed-responsive embed-responsive-16by9 ">
+                    <youtube-player class="embed-responsive-item my_vid_float" [videoId]="video_id"
+                        class="embed-responsive-item" [width]="560" [height]="360"></youtube-player>
+                </div>
+            </div>
+
+            <div class="col-lg-4 " *ngIf="movie_details">
+                <div *ngIf="movie_details.title" class="first_title">{{movie_details.title}}</div>
+                <div class="my_tag_line">{{movie_details.tagline}}</div>
+                <div class="my_date_line"> {{movie_details.release_date}} | &#9733; {{movie_details.vote_average }} |
+                    {{movie_details.runtime }} </div>
+                <div class="my_genre"> <span class="gen_and_spoken">Genres: </span> {{movie_details.genre}}</div>
+                <div class="my_spoken"> <span class="gen_and_spoken">Spoken Languages: </span>
+                    {{movie_details.spoken_languages}} </div>
+
+                <div> <button id="btnSubmit" class="btn btn-primary" value="Not_added"
+                        (click)="Button_Clicked()">{{button_text?"Add to watchlist":"Remove from watchlist"}}</button>
+                </div>
+                <br>
+                <div id="added" class="alert alert-success collapse">
+                    <a id="linkClose" class="close">&times;</a>
+                    Added to watchlist
+                </div>
+
+                <div id="removed" class="alert alert-danger collapse">
+                    <a id="linkClosehere" class="close">&times;</a>
+                    Removed from watchlist
+                </div>
+            </div>
+
+
+        </div>
+        <div class="row">
+            <div class="col-lg-12" *ngIf="movie_details">
+                <div class="word_h4_description">Description</div>
+                <div class="the_description">{{movie_details.overview}}</div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="word_share">
+                    Share
+                </div>
+                <div>
+                    <a [href]=twitter_share target="_blank" rel="noopener noreferrer" class="class_icon">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a [href]=fb_shar target="_blank" rel="noopener noreferrer" class="class_icon">
+                        <i class="fab fa-facebook-square colo_fb"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-12">
+                <h1>Full Cast and Crew</h1>
+            </div>
+        </div>
+        <!-- <div style="display: flex ; display: inline;"> -->
+        <div class="row flex-row flex-nowrap my-all-cards">
+
+            <!-- <ng-template >    -->
+            <div *ngFor="let Each_Cast of cast">
+
+                <div class="card card-block my-card" style=" border:0px solid red;"
+                    (click)="open_popup(Each_Cast.id,content,Each_Cast.full_profile_path)">
+                    <img [src]="Each_Cast.full_profile_path" class="my-image-class" alt="not working">
+                    <div style="font-weight: 700;" class="my-color-black">{{Each_Cast.name}}</div>
+                    <div style="font-weight: 700;" class="as">AS</div>
+                    <div class="my-character">{{Each_Cast.character}}</div>
+                </div>
+            </div>
+
+            <!-- Model -->
+            <ng-template #content let-modal>
+                <div class="modal-header make-it-black">
+                    <h4 *ngIf="bool_name" class="modal-title my-title-format">{{model_name}}</h4>
+                    <button type="button" class="close"  aria-label="Close" (click)="modal.dismiss('Cross click')">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-3">
+                                <img [src]="profile_path" class="fit-the-div" alt="">
+                            </div>
+                            <div class="col-md-9">
+                                <div *ngIf="bool_birth" class="make-it-black" >Birth: {{model_birthdate}}</div>
+                                <!-- *ngIF="bool_website"
+                               -->
+                                <div *ngIf="bool_birth_place" class="make-it-black">Birth Place: {{model_place_of_birth}}</div>
+                                <div *ngIf="bool_website" class="make-it-black"> Website: {{model_homepage}}</div>
+                                <div *ngIf="bool_gender" class="make-it-black">Gender: {{model_gender}}</div>
+                                <div *ngIf="bool_known_for" class="make-it-black">Known for: {{model_known_for}}</div>
+                                <div *ngIf="bool_other_names" class="make-it-black">Also Known as: {{model_other_names}}</div>
+
+                                <ng-template #popContent0 >Visit IMDB</ng-template>
+                                <a *ngIf="bool_imdb_id" [href]="imdb_id" target="_blank" rel="noopener noreferrer"
+                                   [ngbPopover]="popContent0" triggers="hover"  class="class_icon">
+                                    <i class="fab fab fa-imdb colYel"></i>
+                                </a>
+
+                                <ng-template #popContent1 >Visit Instagram</ng-template>
+                                <a *ngIf="bool_insta" [href]="insta" target="_blank" rel="noopener noreferrer"
+                                [ngbPopover]="popContent1" triggers="hover"   class="class_icon">
+                                    <i class="fab fa-instagram col_insta "></i>
+                                </a>
+
+                                <ng-template #popContent2 >Visit Facebook</ng-template>
+                                <!--ToolTip: ngbTooltip="Visit Instagram" tooltipClass="my-custom-class" -->
+                                <a *ngIf="bool_fb" [href]="fb" target="_blank" rel="noopener noreferrer"
+                                [ngbPopover]="popContent2" triggers="hover"  class="class_icon">
+                                    <i class="fab fa-facebook-square colo_fb"></i>
+                                </a>
+
+                                <ng-template #popContent3 >Visit Twitter</ng-template>
+                                <a *ngIf="bool_tweet" [href]="tweet" target="_blank" rel="noopener noreferrer"
+                                [ngbPopover]="popContent3"  triggers="hover"  class="class_icon">
+                                    <i class="fab fa-twitter "></i>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="col-md-12">
+                                <h2 *ngIf="bool_bio" class="make-it-black">Biography</h2>
+                                <div  *ngIf="bool_bio"  class="make-it-black">{{model_biography}}</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </ng-template>
+            <!-- model end -->
+
+        </div>
+        <div  *ngIf="reviews_exist" class="row space-above">
+            <div class="col-md-12">
+                <div>
+                    <h1>Reviews <span class="span_list_reviews"> {{length_of_reviews}}</span></h1>
+                </div>
+            </div>
+        </div>
+
+        <div *ngFor="let review of reviews">
+            <div class="row space-generation">
+                <div class="col-md-12">
+                    <div class="card">
+                        <div class="card-block">
+                            <div class="row margin-declaration">
+                                <div class="col-md-2 col-sm-12">
+                                    <div *ngIf="mobile">
+                                        <img [src]="review.avatar_path_here" class="my-image" alt="">
+                                    </div>
+                                    <div *ngIf="!mobile" class="center-align-it">
+                                        <img [src]="review.avatar_path_here" class="my-image" alt="">
+                                    </div>
+                                </div>
+                                <div class="col-md-10 col-sm-12">
+                                    <div *ngIf="mobile">
+                                        <div class="make-it-black make-it-bold">A review created by {{review.author}}
+                                            <div> <span class="ratings">&#9733; {{review.rating_here}}</span> </div>
+                                        </div>
+                                    </div>
+
+                                    <div *ngIf="!mobile">
+                                        <div class="make-it-black make-inline make-it-bold">A review created by
+                                            {{review.author}}
+                                            <span class="ratings"> &#9733; {{review.rating_here}}</span>
+                                        </div>
+                                    </div>
+                                    <div class="make-it-black me-style-it"> Written by {{review.author}} on {{
+                                        review.created_at | date: "MMMM d, y, h:mm:ss a" }}</div>
+                                    <div class="make-it-black my-cut-to-3">
+                                        {{review.content}}
+                                    </div>
+
+                                    <div class="make-it-black make-it-pretty">
+                                        <a [href]="review.url" target="_blank" rel="noopener noreferrer">Read the
+                                            rest</a>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div *ngIf="similar_movies" class="row">
+            <div class="col-md-12">
+                <h1>Similar Movies</h1>
+            </div>
+
+        </div>
+    </div>
+</div>
+<!-- <div class="container"><div class="row"> -->
+<ngb-carousel *ngIf="mobile && similar_movies" [showNavigationArrows]="showNavigationArrows_movie_details"
+    [showNavigationIndicators]="showNavigationIndicators_movie_details" [interval]="0">
+    <ng-template ngbSlide *ngFor="let single_pack of resp_movie_details " class="col-xs-8">
+        <!-- <div class="">
+            <div class="my-image-card-size" (click)="routeToPage(single_pack.id)">
+                <img class="my-image-card-phone-size" src="{{single_pack.poster}}">
+            </div>
+        </div> -->
+
+        <app-hovercomp [poster]="single_pack.poster" [id]="single_pack.id" [media_type]="single_pack.media_type"
+        [title]="single_pack.title"></app-hovercomp>
+    </ng-template>
+</ngb-carousel>
+
+<ngb-carousel *ngIf="!mobile && similar_movies" [showNavigationArrows]="showNavigationArrows_movie_details"
+    [showNavigationIndicators]="showNavigationIndicators_movie_details" [interval]="0" class="my-no-wrap">
+    <ng-template ngbSlide *ngFor="let single_page of send_data_movie_details">
+        <div class="my-warp-around">
+            <div class="container">
+                <div class="row">
+                    <div class="my-display-card col-md-2" *ngFor="let each_card of single_page"
+                        >
+                         <app-hovercomp class="card border-0 box card-my  text-white bg-dark mb-3"
+                        [poster]="each_card.poster" [id]="each_card.id" [media_type]="each_card.media_type"
+                        [title]="each_card.title"></app-hovercomp>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</ngb-carousel>
+<div class="container">
+    <div *ngIf="recc_movies" class="row">
+        <div class="col-md-12">
+            <h1>Recommended Movies</h1>
+        </div>
+    </div>
+</div>
+
+<ngb-carousel *ngIf="mobile && recc_movies" [showNavigationArrows]="showNavigationArrows_movie_details"
+    [showNavigationIndicators]="!mobile" [interval]="0">
+    <ng-template ngbSlide *ngFor="let single_pack of recc_movie_details " class="col-xs-8">
+        <!-- <div class="">
+            <div class="my-image-card-size" (click)="routeToPage(single_pack.id)">
+                <img class="my-image-card-phone-size" src="{{single_pack.poster}}">
+            </div>
+        </div> -->
+        <app-hovercomp [poster]="single_pack.poster" [id]="single_pack.id" [media_type]="single_pack.media_type"
+        [title]="single_pack.title"></app-hovercomp>
+    </ng-template>
+</ngb-carousel>
+
+<ngb-carousel *ngIf="!mobile && recc_movies" [showNavigationArrows]="showNavigationArrows_movie_details"
+    [showNavigationIndicators]="showNavigationIndicators_movie_details" [interval]="0" class="my-no-wrap">
+    <ng-template ngbSlide *ngFor="let single_page of desktop_recc">
+        <div class="my-warp-around">
+            <div class="container">
+                <div class="row">
+                    <div class="my-display-card col-md-2" *ngFor="let each_card of single_page"
+                        >
+                        <app-hovercomp class="card border-0 box card-my  text-white bg-dark mb-3"
+                        [poster]="each_card.poster" [id]="each_card.id" [media_type]="each_card.media_type"
+                        [title]="each_card.title"></app-hovercomp>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ng-template>
+</ngb-carousel>
+</div>

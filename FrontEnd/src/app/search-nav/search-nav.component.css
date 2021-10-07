@@ -1,0 +1,48 @@
+.my-class-style{
+    cursor: pointer;
+} 
+#typeahead-http{
+    background-color: #03061c !important;
+    border-radius: 0px;
+    border: none;
+    border-bottom: 1px solid white;
+    outline: none;
+}
+
+#typeahead-http :active{
+    outline: none;
+}
+
+input:focus, textarea {
+    outline: none !important;
+}
+
+
+::ng-deep .navbar .dropdown-menu {
+    background-color: rgb(4, 4, 54)!important;
+ 
+    }
+
+    ::ng-deep .navbar .dropdown-item{
+        color: aliceblue!important;
+    }
+.color_my_nav{
+    background-color: #03061c;
+}
+
+input, select, textarea{
+    color: #ffffff;
+    outline: none;
+}
+
+textarea:focus, input:focus {
+    color: #ffffff;
+    outline: none;
+}
+
+::ng-deep.ui-inputtext:enabled:focus:not(.ui-state-error) {
+    outline: 0 none !important;
+    outline-offset: 0 !important;
+  
+ 
+  }

@@ -1,0 +1,123 @@
+
+<div *ngIf="mobile" class="container">
+    <div class="row">
+            <ngb-carousel [showNavigationIndicators]="allow && !mobile" class="Mark-overflow" >
+                <ng-template ngbSlide *ngFor="let single_page of slideshow_data">
+                    <div class="picsum-img-wrapper caption-item-mob my-item-carousal col-md-12 hover-zoom" (mouseover)="isHover=true" (mouseleave)="isHover=false" (click)="routeToPage(single_page.id)">
+                        <img [src]="single_page.backdrop_path" class="fit-parent img-fluid" alt="Random first slide">
+                    </div>
+                    <div  class="carousel-caption text-left">
+                        <h5 >{{single_page.title}}</h5>
+                    </div>
+                </ng-template>
+            </ngb-carousel>     
+    </div>
+</div>
+
+<div *ngIf="!mobile" class="container">
+    <div class="row">
+            <ngb-carousel [showNavigationIndicators]="allow && !mobile" class="Mark-overflow" >
+                <ng-template ngbSlide *ngFor="let single_page of slideshow_data">
+                    <div class="picsum-img-wrapper caption-item my-item-carousal col-md-12 hover-zoom" (mouseover)="isHover=true" (mouseleave)="isHover=false" (click)="routeToPage(single_page.id)">
+                        <img [src]="single_page.backdrop_path" class="fit-parent img-fluid" alt="Random first slide">
+                    </div>
+                    <div *ngIf="isHover" class="carousel-caption text-left">
+                        <h5 >{{single_page.title}}</h5>
+                    </div>
+                </ng-template>
+            </ngb-carousel>     
+    </div>
+</div>
+
+<!-- ... -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12  my-space-above ">
+            <h1 *ngIf="ifWorks">Continue Watching</h1>
+        </div>
+    </div>
+</div>
+
+
+<app-popular-movies *ngIf="ifWorks" [type]="'continuewatching'"></app-popular-movies>
+
+<!-- ... -->
+<div class="container">
+    <div class="row">
+        <div class="col-md-12  my-space-above">
+            <h1> Popular Movies</h1>
+        </div>
+    </div>
+</div>
+
+<app-popular-movies [type]="'POPULAR'"></app-popular-movies>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 my-space-above">
+            <h1> Top Rated Movies </h1>
+        </div>
+    </div>
+</div>
+
+<app-popular-movies [type]="'TopMovies'"> </app-popular-movies>
+ 
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 my-space-above">
+            <h1> Trending Movies </h1>
+        </div>
+    </div>
+</div>
+
+<app-popular-movies [type]="'TrendingMovies'"> </app-popular-movies>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 my-space-above">
+            <h1> Popular TV Shows </h1>
+        </div>
+    </div>
+</div>
+
+<app-popular-movies [type]="'popularTV'"> </app-popular-movies>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 my-space-above">
+            <h1> Top Rated TV Shows </h1>
+        </div>
+    </div>
+</div>
+
+<app-popular-movies [type]="'TVTopRated'"> </app-popular-movies>
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-12 my-space-above">
+            <h1> Trending TV Shows </h1>
+        </div>
+    </div>
+</div>
+
+<app-popular-movies [type]="'TVtrending'"> </app-popular-movies> 
+
+
+<!-- <div class="container">
+    <div class="row">
+            <ngb-carousel [showNavigationIndicators]="allow && !mobile" class="Mark-overflow" >
+                <ng-template ngbSlide *ngFor="let single_page of slideshow_data">
+                    <div class="picsum-img-wrapper caption-item my-item-carousal col-md-12" (click)="routeToPage(single_page.id)">
+                        <img [src]="single_page.backdrop_path" class="fit-parent img-fluid" alt="Random first slide">
+                    </div>
+                    <div class="carousel-caption">
+                        <h3>{{single_page.title}}</h3>
+                    </div>
+                </ng-template>
+            </ngb-carousel>
+
+
+
+        
+    </div>
+</div> -->

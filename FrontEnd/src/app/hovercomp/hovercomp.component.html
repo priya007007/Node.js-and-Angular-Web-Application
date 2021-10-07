@@ -1,0 +1,26 @@
+
+
+
+ <div *ngIf="mobile" (click)="routeToPage(id,media_type)">
+    <div class="my-image-card-size" (click)="routeToPage(id,media_type)">
+        <img class="my-image-card-phone-size" src="{{poster}}">
+        <div class="carousel-caption my-carousel-caption">
+            <h3>{{title}}</h3>
+        </div>
+    </div>
+</div>
+
+
+<div *ngIf="!mobile" (mouseover)="isHover=true" (mouseleave)="isHover=false" style="cursor: pointer;"
+    (click)="routeToPage(id,media_type)">
+    <img class="img-fluid my-img-class card-img" src="{{poster}}">
+    <div *ngIf="isHover" class="card-img-overlay bg-overlay d-flex flex-column justify-content-end">
+        <div class="text-left text-white">
+            <div class="white-text">
+                <span style="color: white;">{{title}}</span>
+            </div>
+        </div>
+    </div>
+
+
+</div> 

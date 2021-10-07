@@ -1,0 +1,136 @@
+h1,p{
+    color: aliceblue;
+}
+
+.carousel_indicators{
+    margin-top: -40px;
+    
+}
+/* ::ng-deep.card{
+    transform:scale(1.1);
+    border-bottom: 1px solid green;
+} */
+/* .my-img-class{
+    max-height: 260px;
+    width:100% ;
+    z-index: 1;
+} */
+
+/* .card-my{
+    background-color: transparent;
+    transition: all .1s ease-in-out;
+    background-clip: inherit;
+
+} */
+
+.card-my:hover {
+    transform: translate3d(0,-1px,0) scale(1.1);
+    transition: all .1s ease-in-out;
+
+  }
+  
+
+/* .card-my:hover{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.3) 45%, rgba(0,0,0,1) 80%);
+} */
+
+/* ::ng-deep.my-img-class:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    
+}*/
+/* .my-img-class:hover{
+background-image: linear-gradient(transparent, rgba(0,0,0,0.3) 45%, rgba(0,0,0,1) 80%);
+}  */
+
+::ng-deep.carousel-inner{
+    overflow: visible!important;
+}
+/* pull down indicators */
+::ng-deep.carousel-indicators{  
+    bottom: -40px !important;
+} 
+
+ngb-carousel:focus{  /* removes white line*/
+    outline: none;
+}
+
+.my-image-card-size{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+img{
+    z-index: -100;
+}
+
+
+::ng-deep.try-black-gradient{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.3) 45%, rgba(0,0,0,1) 80%);
+    height: 100%;
+    width: 100%;
+    display: inline-block;
+    /* z-index: 1000; */
+    color: aliceblue;
+    /* position: relative;*/
+    /* opacity: 1; */
+} 
+
+/* img{
+    z-index: -1;
+} */
+/* 
+ ::ng-deep.carousel-item:after {
+    content:"";
+    display:block;
+    position:absolute;
+    top:0;
+    bottom:0;
+    left:0;
+    right:0;
+    height: 0;
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.3) 45%, rgba(0,0,0,1) 80%);
+  }  */
+
+  ::ng-deep.carousel-item:hover{
+      height: 100%;
+  }
+
+
+  /* .card-img-overlay{
+      padding: 10%;
+      padding-bottom: 5%;
+      border-radius: 0;
+      z-index: 10;
+  } */
+
+  .box{
+      box-shadow: 0px 0px 25px 1px hsla(233,81.1%, 20.4%,0.5);
+  }
+ .bg-overlay{
+      background-image:  linear-gradient(transparent, rgba(0,0,0,0.3) 45%, rgba(0,0,0,1) 80%);
+      max-height: 100%;
+      min-width: 100%;
+    } 
+
+  
+      .my-image-card-phone-size{
+        max-height: 400px;
+        min-width: 270px;
+    
+    }
+
+
+    .my-image-card-size:after{
+        background-image:  linear-gradient(transparent, rgba(0,0,0,0.3) 45%, rgba(0,0,0,1) 80%);
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        content: '';
+        z-index: 1;
+        opacity: 1;
+      }

@@ -1,0 +1,168 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body> -->
+
+<!--  -->
+    <!--<ngb-carousel *ngIf="mobile" [showNavigationArrows]="showNavigationArrows" class="my-carousal-navigators"
+    [showNavigationIndicators]="showNavigationIndicators" [interval]="0">
+    <ng-template ngbSlide *ngFor="let single_pack of resp" class="col-xs-8" (touchend)="routeToPage(single_pack.id,single_pack.media_type)">
+        <div class="my-warp-around-phone">
+            <div class="my-image-card-size" >
+                <img class="my-image-card-phone-size" src="{{single_pack.poster}}">
+            </div>
+        </div>
+         <div class="carousel-caption bg-overlay">
+            <h3>{{single_pack.title}}</h3>
+        </div> 
+    </ng-template>
+</ngb-carousel>  -->
+
+
+    <!-- <ngb-carousel *ngIf="mobile" [showNavigationArrows]="showNavigationArrows" class="my-carousal-navigators"
+[showNavigationIndicators]="showNavigationIndicators" [interval]="0" >
+<ng-template ngbSlide *ngFor="let single_pack of resp"   >
+    <div class="my-warp-around-phone col-sm-12">
+        <div class="my-image-card-size "  (touchend)="routeToPage(single_pack.id,single_pack.media_type)">
+            <img class=" img-fluid my-image-card-phone-size" src="{{single_pack.poster}}">
+            <div  class="card-img-overlay bg-overlay d-flex flex-column justify-content-end">
+                <div class="text-left text-white">
+                    <div class="white-text">
+                        <span style="color: white;">{{single_pack.title}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+</ng-template>
+</ngb-carousel> -->
+
+    <!-- 
+<ngb-carousel *ngIf="mobile" [showNavigationArrows]="showNavigationArrows" class="my-carousal-navigators"
+        [showNavigationIndicators]="showNavigationIndicators" [interval]="0">
+        <ng-template ngbSlide *ngFor="let single_pack of resp">
+            <div class="container">
+                <div class="row">
+                    <div class=" col-sm-8">
+                        <div >
+                        <div class=" card border-0 box   text-white  mb-3 "
+                            (touchend)="routeToPage(single_pack.id,single_pack.media_type)">
+                           
+                            <img class=" img-fluid my-image-card-phone-size" src="{{single_pack.poster}}" style="text-align: center; ">
+                            <div class="card-img-overlay bg-overlay d-flex flex-column justify-content-end">
+                                <div class="text-left text-white">
+                                    <div class="white-text">
+                                        <span style="color: white;">{{single_pack.title}}</span>
+                                    </div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ng-template>
+    </ngb-carousel> -->
+
+    <!-- <ngb-carousel *ngIf="mobile" [showNavigationArrows]="showNavigationArrows" class="my-carousal-navigators" WORKING CODE LAST CASE
+    [showNavigationIndicators]="showNavigationIndicators" [interval]="0">
+    <ng-template ngbSlide *ngFor="let single_pack of resp" class="col-xs-8" >
+        <div class="">
+            <div class="my-image-card-size" (click)="routeToPage(single_pack.id,single_pack.media_type)" >
+                <img class="my-image-card-phone-size" src="{{single_pack.poster}}">
+                <div class="carousel-caption ">
+                    <h3>{{single_pack.title}}</h3>
+                </div> 
+            </div>
+        </div>
+         
+    </ng-template>
+</ngb-carousel>  -->
+
+    <ngb-carousel *ngIf="mobile" [showNavigationArrows]="showNavigationArrows" class="my-carousal-navigators"
+        [showNavigationIndicators]="showNavigationIndicators" [interval]="0">
+        <ng-template ngbSlide *ngFor="let single_pack of resp" class="col-xs-8">
+            <app-hovercomp [poster]="single_pack.poster" [id]="single_pack.id" [media_type]="single_pack.media_type"
+                [title]="single_pack.title"></app-hovercomp>
+
+        </ng-template>
+    </ngb-carousel>
+
+    <ngb-carousel *ngIf="!mobile" [showNavigationArrows]="showNavigationArrows"
+        [showNavigationIndicators]="showNavigationIndicators" [interval]="0" class="my-no-wrap">
+        <ng-template ngbSlide *ngFor="let single_page of send_data">
+            <div class="my-warp-around">
+                <div class="container">
+                    <div class="row">
+                        <div class="my-display-card  col-sm-12 col-md-2 " *ngFor="let each_card of single_page">
+                            <app-hovercomp class="card border-0 box card-my  text-white bg-dark mb-3"
+                                [poster]="each_card.poster" [id]="each_card.id" [media_type]="each_card.media_type"
+                                [title]="each_card.title"></app-hovercomp>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </ng-template>
+    </ngb-carousel>
+
+
+    <!-- THE CODE THAT DID NOT WORK BEFORE -->
+
+    <!-- <div (mouseover)="isHover=true" (mouseleave)="isHover=false"
+                                (click)="routeToPage(each_card.id,each_card.media_type)">
+                                <img class="img-fluid my-img-class card-img" src="{{each_card.poster}}">
+                                <div *ngIf="isHover"
+                                    class=" card-img-overlay bg-overlay d-flex flex-column justify-content-end">
+                                    <div class="text-left text-white">
+                                        <div class="white-text">
+                                            <span style="color: white;">{{each_card.title}}</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->
+    <!-- ng-mouseover="count = count + 1" ng-init="count=0" -->
+
+    <!-- <ngb-carousel *ngIf="!mobile" [showNavigationArrows]="showNavigationArrows"
+    [showNavigationIndicators]="showNavigationIndicators" [interval]="0" class="my-no-wrap">
+    <ng-template ngbSlide *ngFor="let single_page of send_data">
+        <div class="my-warp-around">
+            <div class="container">
+                <div class="row">
+                    <div class="my-display-card  col-sm-12 col-md-2 " (mouseover)="isHover=true" ng-mouseover="count = count + 1" ng-init="count=0"
+                    *ngFor="let each_card of single_page" 
+                        (click)="routeToPage(each_card.id)">    
+                        <div class="card card-my">                    
+                        <img class="my-img-class card-img" src="{{each_card.poster}}">
+                        <div *ngIf="isHover" class=" ">
+                            <div class="">
+
+                            
+                            <div class="carousel-caption try-black-gradient" >
+                                <h3>{{each_card.title}}</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </ng-template>
+</ngb-carousel> -->
+
+
+
+<!--  -->
+
+<!-- </body>
+
+</html> -->

@@ -1,0 +1,114 @@
+.fit-parent{
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    object-position: 20% 0%;
+    
+}
+
+.Mark-overflow{
+   overflow: hidden;
+  
+}
+ngb-carousel:focus{  /* removes white line*/
+    outline: none;
+}
+
+::ng-deep.Mark-overflow .carousel-indicators{
+  margin-bottom: 50px;
+}
+
+.showNavigationIndicators_main{
+margin-bottom: 50px;
+}
+
+/* ::ng-deep.carousel-caption {
+    opacity:0;} */
+    /* transition:500ms ease-in-out; */
+  
+
+
+  /* ::ng-deep.fit-parent:hover{
+    opacity:1;
+    z-index: -1;
+  } */
+  /* ::ng-deep.carousel-item:hover .carousel-caption {
+   
+ opacity:1;
+   
+  } */
+  /* ::ng-deep.carousel-item:hover{
+     transform: scale(0.5.0.5); 
+  } */
+
+  /* ::ng-deep.my-item-carousal{
+    cursor: pointer;
+    background-image:  linear-gradient(transparent, rgba(0,0,0,0.3) 45%, rgba(0,0,0,1) 80%);
+    z-index: 10;
+
+  } */
+
+   /* ::ng-deep.caption-item{
+    max-height: 300px;
+  }  */
+.my-space-above{
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+
+.caption-item-mob:after{
+  background-image:  linear-gradient(transparent, rgba(0,0,0,0.3) 45%, rgba(0,0,0,1) 80%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 1;
+
+}
+
+.caption-item:after{
+  background-image:  linear-gradient(transparent, rgba(0,0,0,0.3) 45%, rgba(0,0,0,1) 80%);
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  content: '';
+  transition: all 0.3s ease;
+  z-index: 1;
+  opacity: 0;
+}
+
+@media (max-width: 767px) {
+
+}
+
+.caption-item:hover:after{
+  opacity: 1;
+  cursor: pointer;
+  }
+  .caption-item:hover{
+    transform: scale(1.1)
+  }
+
+ 
+
+
+/* ::ng-deep.carousel-caption {
+  text-align: left;
+  font-size: 10px;
+  
+} */
+
+.carousel-caption .text-left {
+  left: 40px;
+  bottom: 10px;
+  position: absolute;
+}
+
+

@@ -1,0 +1,272 @@
+.my-outer{
+    margin-right:20px ;
+    margin-left:20px;
+}
+
+.first_title{
+    font-size: 40px;
+    font-weight:490;
+    color: rgb(225, 225, 225);
+}
+
+.my_tag_line{
+    font-style: italic;
+    color: rgb(200, 200, 200);
+}
+
+.my_date_line{
+    color: rgb(200, 200, 200);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.btn:focus {
+    box-shadow: none;
+  }
+.my_spoken{
+    padding-bottom: 15px;
+}
+
+.my_genre, .my_spoken{
+    color: rgb(200, 200, 200);
+}
+.gen_and_spoken{
+    color: rgb(225, 225, 225);
+}
+
+.word_h4_description{
+    padding-top: 10px;
+    font-weight:600;
+}
+
+.the_description{
+    color: rgb(200, 200, 200);
+}
+
+.colo_fb{
+    color:blue;
+}
+
+.class_icon{
+font-size: 20px;
+padding-right:10px ;
+}
+
+.word_share{
+    padding-top:20px ;
+}
+
+.my-color-black{
+    color: black;
+    text-align: center;
+}
+
+.my-card{
+
+    max-width: 160px;
+    margin-right: 17px;
+    border-radius: 10px;
+ 
+}
+
+::ng-deep.my-card:hover{
+    cursor: pointer;
+}
+
+.my-all-cards{
+    overflow-x: scroll;
+    margin-left: 5px;
+
+}
+
+.as{
+    text-align: center;
+    color: black;
+}
+
+.my-character{
+    text-align: center;
+    color: black;
+}
+
+::ng-deep.my-image-class{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    margin: 0;
+    border:0px solid red;
+
+}
+
+.card-my:hover {
+    transform: translate3d(0,-1px,0) scale(1.1);
+    transition: all .1s ease-in-out;
+
+  }
+
+
+::-webkit-scrollbar {
+    height: 5px;
+    border-radius: 10px;
+    margin-top: 10px;
+    
+  }
+   
+  ::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    border-left: 0.5px solid rgb(30, 30, 41);
+  }
+   
+  ::-webkit-scrollbar-thumb {
+    background-color: darkgrey;
+    /* outline: 1px solid slategrey; */
+    border-radius: 10px;
+    width: 2px;
+  }
+
+  .my-title-format{
+      color: #000;
+  }
+
+  .make-it-black{
+    color: #000;
+  }
+
+  .fit-the-div{
+      width: 100%;
+  }
+
+  .make-it-black{
+      color: black;
+  }
+
+  .colYel{
+      color: sandybrown;
+  }
+
+  .col_insta{
+      color: rgb(198, 53,132);
+  }
+
+  .span_list_reviews{
+      color: rgb(105, 104, 104);
+  }
+
+  .my-image{
+      width: 50px;
+      height: 50px;
+  } 
+
+  .center-align-it{
+      text-align: center;
+  }
+
+  .make-inline{
+      display: contents;
+  }
+
+  .ratings{
+      color: white;
+      background-color: black;
+      border-radius: 20px;
+      padding-left: 10px;
+      padding-right: 10px;
+
+  }
+
+  .make-it-bold{
+      font-weight: 670;
+      font-size: 17px;
+  }
+
+  .me-style-it{
+      color: rgb(145, 139, 145);
+      font-size: 15px;
+  }
+
+  .my-cut-to-3{
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+  }
+
+
+  .make-it-pretty{
+      text-decoration: underline;
+      margin-top: 20px;
+      margin-bottom: 20px;
+  }
+
+  .margin-declaration{
+      margin: 10px;
+  }
+
+  .space-generation{
+      margin-bottom: 15px;
+  }
+
+  .space-above{
+      margin-top: 20px;
+  }
+
+  .my-img-class{ /*from popular moviees*/
+    max-height: 260px;
+    width:100% ;
+}
+::ng-deep.my-img-class:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+
+.my-img-class:hover{
+    background-image: linear-gradient(transparent, rgba(0,0,0,0.3) 45%, rgba(0,0,0,1) 80%);
+  
+    }
+/* 
+    ::ng-deep img{
+        z-index:-1;
+        mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+        -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.65) 100%);
+    } */
+
+
+    ::ng-deep.carousel-inner{
+        overflow: visible!important;
+    }
+
+
+    ::ng-deep.carousel-indicators{  
+        bottom: -40px !important;
+    } 
+ngb-carousel:focus{  /*from popular moviees*/
+    outline: none;
+}
+
+.my-image-card-phone-size{
+    max-height: 400px;
+    min-width: 270px;
+
+}
+
+.my-image-card-size{
+    text-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+
+}
+
+.my-image-card-phone-size{
+    max-height: 400px;
+    min-width: 270px;
+
+}
+
+.try-test{
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
