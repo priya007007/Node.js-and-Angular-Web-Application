@@ -23,5 +23,9 @@ Developed a responsive single page web application that displays movies and tv s
 ![image](https://user-images.githubusercontent.com/78100992/138610563-804d13a4-7271-4490-81a3-26e0900b70ea.png)
 ![image](https://user-images.githubusercontent.com/78100992/138610574-14641b3a-29a7-4f48-9226-166cac38307a.png)
 ![image](https://user-images.githubusercontent.com/78100992/138610583-03304def-d85a-4dc4-8036-653e3bcd399a.png)
-![image](https://user-images.githubusercontent.com/78100992/138610594-1d3d6be1-18ea-46f8-9edb-f68694fbb68e.png)
+![image](https://user-images.githubusercontent.com/78100992/138610866-a5d27a86-2d9d-40fa-b0e4-19d90b4f5d99.png)
+
+## Cast details
+![image](https://user-images.githubusercontent.com/78100992/138610880-1608d617-c7c6-4228-87e7-dde6d564c946.png)
+![image](https://user-images.githubusercontent.com/78100992/138610891-df6f208c-8da8-4add-a367-035c09b8f774.png)
 
