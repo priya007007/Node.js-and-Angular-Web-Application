@@ -4,5 +4,6 @@ Developed a responsive single page web application that displays movies and tv s
 
 ## Main Page: 
 ![image](https://user-images.githubusercontent.com/78100992/136332672-80186b57-d538-4cbe-9f3d-5be71337b40d.png)
+---------------------------------------------------------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/78100992/138610295-0d8ccbeb-a77d-4f5e-af6e-6fad32c36dfd.png)
 
