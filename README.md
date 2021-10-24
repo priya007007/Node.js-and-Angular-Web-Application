@@ -2,6 +2,7 @@
 Developed a responsive single page web application that displays movies and tv shows,has Search, Details of selected Movie/TV shows and Watchlist features (UI similar to Netflix/HBO). It has the ability to show recently watched using Continue Watching and Add to a watchlist selection that persists even after closing the window. Created endpoints in Node.js to fetch data from TMDB API. Deployed the backend server on GCP.
 >Technology used: GCP, Node.js, localStorage API (HTML5), HTML, CSS, JavaScript, JSON, Express, Angular, Bootstrap, AJAX (via Angular)
 
+# Desktop Version:
 ## Main Page: 
 ![image](https://user-images.githubusercontent.com/78100992/136332672-80186b57-d538-4cbe-9f3d-5be71337b40d.png)
 ---------------------------------------------------------------------------------------------------------------
@@ -21,11 +22,18 @@ Developed a responsive single page web application that displays movies and tv s
 ---------------------------------------------------------------------------------------------------------------
 ## Details Page:
 ![image](https://user-images.githubusercontent.com/78100992/138610563-804d13a4-7271-4490-81a3-26e0900b70ea.png)
+---------------------------------------------------------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/78100992/138610574-14641b3a-29a7-4f48-9226-166cac38307a.png)
+---------------------------------------------------------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/78100992/138610583-03304def-d85a-4dc4-8036-653e3bcd399a.png)
+---------------------------------------------------------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/78100992/138610866-a5d27a86-2d9d-40fa-b0e4-19d90b4f5d99.png)
 
 ## Cast details
 ![image](https://user-images.githubusercontent.com/78100992/138610880-1608d617-c7c6-4228-87e7-dde6d564c946.png)
+---------------------------------------------------------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/78100992/138610891-df6f208c-8da8-4add-a367-035c09b8f774.png)
+
+# Mobile version:
+![Screenshot_20211024-130733_Chrome](https://user-images.githubusercontent.com/78100992/138611189-a80abd94-cf87-4348-a9c5-08a3a6d8a900.jpg)
 
