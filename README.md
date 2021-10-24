@@ -2,7 +2,6 @@
 Developed a responsive single page web application that displays movies and tv shows,has Search, Details of selected Movie/TV shows and Watchlist features (UI similar to Netflix/HBO). It has the ability to show recently watched using Continue Watching and Add to a watchlist selection that persists even after closing the window. Created endpoints in Node.js to fetch data from TMDB API. Deployed the backend server on GCP.
 >Technology used: GCP, Node.js, localStorage API (HTML5), HTML, CSS, JavaScript, JSON, Express, Angular, Bootstrap, AJAX (via Angular)
 
-# Desktop Version:
 ## Main Page: 
 ![image](https://user-images.githubusercontent.com/78100992/136332672-80186b57-d538-4cbe-9f3d-5be71337b40d.png)
 ---------------------------------------------------------------------------------------------------------------
@@ -33,7 +32,7 @@ Developed a responsive single page web application that displays movies and tv s
 ![image](https://user-images.githubusercontent.com/78100992/138610880-1608d617-c7c6-4228-87e7-dde6d564c946.png)
 ---------------------------------------------------------------------------------------------------------------
 ![image](https://user-images.githubusercontent.com/78100992/138610891-df6f208c-8da8-4add-a367-035c09b8f774.png)
-
+<!-- 
 # Mobile version:
 ## Main Page:
 ![Screenshot_20211024-130733_Chrome](https://user-images.githubusercontent.com/78100992/138611189-a80abd94-cf87-4348-a9c5-08a3a6d8a900.jpg)
@@ -53,3 +52,4 @@ Developed a responsive single page web application that displays movies and tv s
 ## Remove from watchlist: 
 ![Screenshot_20211024-130910_Chrome](https://user-images.githubusercontent.com/78100992/138611652-a07685b8-57a8-4096-88e7-3281ea0091ed.jpg)
 
+ -->
