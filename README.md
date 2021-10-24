@@ -35,5 +35,21 @@ Developed a responsive single page web application that displays movies and tv s
 ![image](https://user-images.githubusercontent.com/78100992/138610891-df6f208c-8da8-4add-a367-035c09b8f774.png)
 
 # Mobile version:
+## Main Page:
 ![Screenshot_20211024-130733_Chrome](https://user-images.githubusercontent.com/78100992/138611189-a80abd94-cf87-4348-a9c5-08a3a6d8a900.jpg)
+
+## Watchlist
+![Screenshot_20211024-130809_Chrome](https://user-images.githubusercontent.com/78100992/138611540-fbf645a2-b9b0-461e-a16b-327930d761db.jpg)
+
+## Details Page
+![Screenshot_20211024-130832_Chrome](https://user-images.githubusercontent.com/78100992/138611575-86b00ecd-0ac8-43e4-bfaf-e94d9b8c7815.jpg)
+
+## Cast: 
+![Screenshot_20211024-130921_Chrome](https://user-images.githubusercontent.com/78100992/138611607-ee984246-4b09-46d3-868a-f5c9efa7b3d4.jpg)
+
+## Add to watchlist: 
+![Screenshot_20211024-130902_Chrome](https://user-images.githubusercontent.com/78100992/138611637-a37b449f-4783-4eaa-b9d8-4721adfc03a0.jpg)
+
+## Remove from watchlist: 
+![Screenshot_20211024-130910_Chrome](https://user-images.githubusercontent.com/78100992/138611652-a07685b8-57a8-4096-88e7-3281ea0091ed.jpg)
 
